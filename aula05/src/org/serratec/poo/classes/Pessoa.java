@@ -1,8 +1,10 @@
 package org.serratec.poo.classes;
 
 import java.time.LocalDate;
+import java.time.Period;
 
-public class Pessoa {
+
+public abstract class Pessoa {
 	private String nome;
 	private String cpf;
 	private LocalDate dataNascimento;
@@ -25,19 +27,22 @@ public class Pessoa {
 	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
+	
+	public int getIdade() {
+		LocalDate dataAtual = LocalDate.now();
+		Period periodo = Period.between(dataNascimento, dataAtual);
+		return periodo.getYears();
+	}
 
 	@Override
 	public String toString() {
-		//return "Nome: " + nome + ", cpf " + cpf + ", dataNascimento " + dataNascimento;
 		return String.format("""
 				Nome: %s
 				CPF: %s
 				D.Nasc: %s
-				""", nome, cpf, dataNascimento);
+				Idade: %s
+				""", nome, cpf, Biblioteca.formataData(dataNascimento), 
+				getIdade());
 	}
 	
-	
-	
-	
-
 }
