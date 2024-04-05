@@ -26,7 +26,9 @@ public class Vendedor extends Funcionario {
 
 	@Override
 	public String toString() {
-		return super.toString() + " Percentual comissão=" + percComissao + ", totalVendas=" + totalVendas;
+		return super.toString() + " percentual comissão=" 
+				+ percComissao + ", totalVendas=" + totalVendas +
+				" é um vendedor.";
 	}
 
 }

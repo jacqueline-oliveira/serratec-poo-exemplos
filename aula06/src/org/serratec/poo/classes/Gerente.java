@@ -26,7 +26,9 @@ public class Gerente extends Funcionario {
 
 	@Override
 	public String toString() {
-		return super.toString() + " Plr=" + plr + ", qtdFuncionarioDepto=" + qtdFuncionarioDepto ;
+		return super.toString() + " plr=" + plr + 
+				", qtdFuncionarioDepto=" + qtdFuncionarioDepto + 
+				" é um gerente.";
 	}
 	
 	@Override
