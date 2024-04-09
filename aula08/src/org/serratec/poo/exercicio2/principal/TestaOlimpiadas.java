@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.serratec.poo.exercicio2.classes.Atleta;
 import org.serratec.poo.exercicio2.classes.ComissaoTecnica;
+import org.serratec.poo.exercicio2.classes.EstadoCivil;
 import org.serratec.poo.exercicio2.classes.Olimpiadas;
 import org.serratec.poo.exercicio2.classes.Pais;
 import org.serratec.poo.exercicio2.classes.Treinador;
@@ -23,6 +24,11 @@ public class TestaOlimpiadas {
 		
 		atleta1.setPeso(70);
 		atleta2.setPeso(85);
+		
+		atleta1.setEstadoCivil(EstadoCivil.CASADO);
+		atleta2.setEstadoCivil(EstadoCivil.VIUVO);
+		System.out.println(atleta1);
+		System.out.println(atleta2);
 		
 		ComissaoTecnica fulano1 = new ComissaoTecnica("Alberto", "desnecessário", argentina);
 		fulano1.setEmDiaComAsObrigacoesLegais(true);
@@ -42,11 +48,10 @@ public class TestaOlimpiadas {
 		timeDasOlimpiadas.add(treinador1);
 		timeDasOlimpiadas.add(treinador2);
 		
-		for (Olimpiadas membro : timeDasOlimpiadas) {
-			System.out.println(membro.verificaSituacao());
-		}
+//		for (Olimpiadas membro : timeDasOlimpiadas) {
+//			System.out.println(membro.verificaSituacao());
+//		}
 		
-	
 	}
 
 }

@@ -2,6 +2,7 @@ package org.serratec.poo.exercicio2.classes;
 
 public class Atleta implements Olimpiadas {
 	private String nome;
+	private EstadoCivil estadoCivil;
 	private double peso;
 	private String modalidade;
 	private Pais pais;
@@ -50,9 +51,21 @@ public class Atleta implements Olimpiadas {
 	    		+ " Kg " + texto + " das Olimpíadas.";
 	}
 
+
+	public EstadoCivil getEstadoCivil() {
+		return estadoCivil;
+	}
+
+	public void setEstadoCivil(EstadoCivil estadoCivil) {
+		this.estadoCivil = estadoCivil;
+	}
+
 	@Override
 	public String toString() {
-		return "Atleta [nome=" + nome + ", peso=" + peso + ", modalidade=" + modalidade + ", pais=" + pais + "]";
+		return "Atleta " + nome + ", estadoCivil= " + estadoCivil.getSigla() + ", peso= " + peso + ", modalidade= " + modalidade
+				+ ", pais= " + pais;
 	}
+
+	
 
 }
