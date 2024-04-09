@@ -1,6 +1,6 @@
 package org.serratec.poo.classes;
 
-public class Funcionario {
+public abstract class Funcionario {
 	private String nome;
 	protected double salario;
 	
@@ -30,5 +30,9 @@ public class Funcionario {
 	public String toString() {
 		return "Funcionario " + nome + ", salario=" + salario ;
 	}
+	
+	public final void descreveSalario() {
+		System.out.println("Salário: " + getSalario());
+	};
 	
 }

@@ -31,4 +31,6 @@ public class Vendedor extends Funcionario {
 				" é um vendedor.";
 	}
 
+	
+
 }

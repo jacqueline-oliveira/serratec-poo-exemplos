@@ -41,5 +41,6 @@ public class Gerente extends Funcionario {
 		super.reajustaSalario(percentual);
 		salario += 1000;
 	}
+
 	
 }
