@@ -12,7 +12,7 @@ public enum EstadoCivil {
 	private int enumerado;
 	
 	
-	private EstadoCivil(String descricaoTextual, String sigla, int enumerado) {
+	private EstadoCivil(String sigla, String descricaoTextual, int enumerado) {
 		this.descricaoTextual = descricaoTextual;
 		this.enumerado = enumerado;
 		this.sigla = sigla;
