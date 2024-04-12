@@ -69,6 +69,28 @@ public class TestaVenda {
 		System.out.println("\nProdutos Tio João");
 		produtosPorMarca.forEach(System.out::println);
 		
-		System.out.println("=============================");	
+		System.out.println("=============================");
+		
+		List<Produto> produtosComSufixo = venda2.getProdutos().stream()
+				.filter(p -> p.getValor() < 10)
+				.map(p -> new Produto(p.getDescricao() + " da Jacqueline", p.getValor()))
+				.toList();
+		
+		System.out.println("\nProdutos da Jacqueline");
+		produtosComSufixo.forEach(System.out::println);
+		
+		System.out.println("=============================");
+		
+		Map<String, Double> mapa = venda2.getProdutos().stream()
+				.collect(Collectors.toMap(Produto::getDescricao, Produto::getValor));
+		
+	   for (Map.Entry<String, Double> entry : mapa.entrySet()) {
+		 System.out.println("Produto: " + entry.getKey());
+		 System.out.println("Valor: " + entry.getValue());
+		 System.out.println("============");
+	
+	}
+	   
+	  mapa.forEach((descricao, valor) -> System.out.println(descricao + " : " + valor)); 
 	}
 }
