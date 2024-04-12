@@ -20,6 +20,11 @@ public class Produto {
 	public double getValor() {
 		return valor;
 	}
+	
+	
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 
 	public List<AlteracaoPreco> getAlteracaoPrecos() {
 		return alteracaoPrecos;
